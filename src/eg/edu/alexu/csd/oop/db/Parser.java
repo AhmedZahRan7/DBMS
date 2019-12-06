@@ -117,10 +117,10 @@ public class Parser {
                 query1 = query1.replaceAll("(?i)^\\s*DATABASE\\s+", "");
                 String dataBaseName = "";
                 boolean dropIfExist = false;
-                if (query1.matches("^\\s*\\w+\\s*$")) {
+                if (query1.matches("^\\s*.+\\s*$")) {
                     // for databases creation, for example "create database database_name1;"
                     dataBaseName = query1.replaceAll("\\s*$", "");
-                } else if (query1.matches("(?i)^\\s*\\w+\\s+DROP\\s+IF\\s+EXIST\\s*$")) {
+                } else if (query1.matches("(?i)^\\s*.+\\s+DROP\\s+IF\\s+EXIST\\s*$")) {
                     // for example "create database drop IF NOT EXIST batabase1;"
                     dataBaseName = query1.replaceAll("(?i)\\s+DROP\\s+IF\\s+EXIST\\s*$", "");
                     dropIfExist = true;
