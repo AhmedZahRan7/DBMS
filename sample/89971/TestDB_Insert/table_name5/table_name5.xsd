@@ -1,0 +1,18 @@
+<?xml version = "1.0"?>
+   <xs:schema xmlns:xs = "http://www.w3.org/2001/XMLSchema">
+   <xs:element name = 'table_name5'>
+         <xs:complexType>
+              <xs:sequence>
+                  <xs:element name = 'record' type = 'record'   minOccurs='0' maxOccurs = 'unbounded' />
+              </xs:sequence>
+         </xs:complexType>
+   </xs:element>
+
+<xs:complexType name = 'record'>
+      <xs:sequence>
+        <xs:element name ="column_name1" type ="xs:string"/>
+        <xs:element name ="column_name2" type ="xs:int"/>
+        <xs:element name ="column_name3" type ="xs:string"/>
+      </xs:sequence>
+ </xs:complexType> 
+</xs:schema>
